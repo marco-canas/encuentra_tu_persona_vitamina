@@ -1,0 +1,85 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{pstricks}
+\usepackage{graphicx}
+
+
+\begin{document}
+
+\begin{enumerate}
+\item Defina la funci\'on esSimetrica() que reciba como argumento un array de NumPy (matriz), verifique si es cuadrada y retorne un boleano indicando si la matriz es sim\'etrica o no.
+
+\item Defina la funci\'on esAntiSimetrica() que reciba como argumento un array de NumPy (matriz), verifique si es cuadrada y retorne un boleano indicando si la matriz es antisim\'etrica o no.
+
+\item Defina la funci\'on esTriangularSuperior() que reciba como argumento un array de NumPy (matriz) y retorne un boleano indicando si la matriz es triangular superior o no.
+
+\item Defina la funci\'on esTriangularInferior() que reciba como argumento un array de NumPy (matriz) y retorne un boleano indicando si la matriz es triangular inferior o no.
+
+\item Defina la funci\'on esDiagonal() que reciba como argumento un array de NumPy (matriz), verifique si es cuadrada y retorne un boleano indicando si la matriz es diagonal o no.
+
+\item Defina la funci\'on esIdentidad() que reciba como argumento un array de NumPy (matriz), verifique si es cuadrada y retorne un boleano indicando si la matriz es una identidad o no.
+
+
+\item Defina la funci\'on esInvertible() que reciba como argumento un array de NumPy (matriz), verifique si es cuadrada y retorne un boleano indicando si la matriz es una invertible o no.
+
+\item Defina la funci\'on esOrtogonal() que reciba como argumento un array de NumPy (matriz), verifique si es cuadrada y retorne un boleano indicando si la matriz es una ortogonal o no.
+
+\item Defina la funci\'on sonOrtogonales() que reciba como argumentos dos arrays o vectores, verifique que tienen la misma cantidad de elementos y retorne booleano indicando si los vectores son ortogonales o no.
+
+\item Defina la funci\'on potenciaTerminoaTermino() que reciba como argumentos un array (matriz $A=[a _{ij}]$) y y un entero positivo (exponente $n$) y que retorne una matriz $P=[p_{ij}]$ donde $p _{ij}=a_{ij}^n$
+
+\item Defina la funci\'on elevar() que tenga como entradas una matriz $A$ y un entero positivo $n$, verifique que es cuadrada y retorne la matriz $A^{n}$.
+
+\item Defina la funci\'on agregaUnosAlaIzquierda() que tenga como argumento una matriz $A _{m\times  n } $ y que retorne la matriz $X _{ m\times (n+1)} $ cuya primera columna est\'a llena de unos y las dem\'as columnas coincidan respectivamente con las columnas de $A$. 
+
+\item Defina la funci\'on matrizVandermonde() que tenga como argumentos un array o vector $x=(x _{ 0}, x _{ 1}  , ..., x _{ m-1} )$ y un entero positivo $d$ y que retorne la matriz $V = [v _{ ij} ] _{ m\times (d+1)} $ de tal manera que $v _{ ij}= x _{ i} ^{ j}  $ para $0\leq i \leq m-1$ y $0\leq j\leq d$.
+
+\item Defina la funci\'on matrizDeMatrices($A _{ m\times n} $, $B _{ m\times p} $, $C _{ r\times n} $, $D _{ r\times p} $) que tenga como argumentos las cuatro matrices indicadas con sus respectivos \'ordenes y que retorne la matriz $M _{ (m+r)\times (n+p)}  = \begin{bmatrix}
+A _{ m\times n} & B _{ m\times p} \\ C _{ r\times n} & D _{ r\times p}
+\end{bmatrix}$
+
+\item Defina la matriz tridiagonalDeConstantes($a,b,c, n$) que reciba como argumentos tres flotantes $a, b$, $c$ y un entero positivo $n$ y que retorne la matriz tridiagonal $T_{n\times n} = \begin{bmatrix}
+b &c &0 &\dots &0\\
+a &b &c &\dots &0\\
+0 &a &b &\dots &0\\
+\vdots &\vdots &\vdots &\ddots &c\\
+0 &0 &\dots &a &b\\
+\end{bmatrix}$
+
+\item Defina una funci\'on filasIndependientes() que reciba como argumento un arreglo $X$ (2D) y retorne True si las filas de $X$ son linelamente independientes.
+
+
+\item Defina una funci\'on columnasIndependientes() que reciba como argumento un arreglo $X$ (2D) y retorne True si las columnas de $X$ son linelamente independientes.
+
+\item Defina una funci\'on matrizDeHilbert() que tenga como argumento un entero positivo $n$ y retorne la matriz de Hilbert $H _{n\times n}=[\frac{1}{i+j+1}] _{i,j=1} ^{n}$. Explore lo que sucede con el determinante, con la inversa y con el rank de $H_{n\times n}$ a medida que $n$ crece.
+
+\item Defina una funci\'on matrizAjedrez() que tenga como argumento un entero positivo $n$ y retorne la matriz ajedrez (que intercala ceros y uno) $A_{n\times n} = \begin{bmatrix}
+0 &1 &0 &\dots &0\\
+1 &0 &1 &\dots &1\\
+0 &1 &0 &\dots &0\\
+\vdots &\vdots &\vdots &\ddots &1\\
+0 &1 &0 &\dots &0\\
+\end{bmatrix}$
+Para diferentes valores positivos de $k$, calcule $A ^k$.
+?`Puede  conjeturar una expresi\'on general para los resultados obtenidos?
+
+\item Defina una funci\'on esMatrizCircular() que reciba una matriz, verifique si es cuadrada y sim\'etrica, adem\'as que  retorne un booleano indicando si es circular o no. Una matriz circular es aquella que tiene entrada constante a lo largo de las diagonales, en la forma siguiente: $C = \begin{bmatrix}
+b &c &d &\dots &h\\
+c &b &c &\dots &\cdot\\
+d &c &b &\dots &d\\
+\vdots &\vdots &\vdots &\ddots &c\\
+h &\cdots &d &c &b\\
+\end{bmatrix}$
+
+\item Defina una funci\'on MatrizCircular($[b,c,d,...,h]$) que reciba como argumento una lista con $n$ valores $[b,c,d,...,h]$ y retorne la matriz circular en la forma: $C _{n\times n} = \begin{bmatrix}
+b &c &d &\dots &h\\
+c &b &c &\dots &\cdot\\
+d &c &b &\dots &d\\
+\vdots &\vdots &\vdots &\ddots &c\\
+h &\cdots &d &c &b\\
+\end{bmatrix}$
+
+\end{enumerate}
+\end{document}
