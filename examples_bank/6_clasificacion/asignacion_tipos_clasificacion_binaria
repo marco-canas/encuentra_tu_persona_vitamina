@@ -1,0 +1,112 @@
+Dataset inicial: load_iris
+
+# TAREA
+Caso 1: Constuir un clasificador binario detector de setosa
+Caso 2: Constuir un clasificador binario versicolor vs virgínica
+
+# ATRIBUTOS
+Caso 1:
+atributo 1: Longitud de sépalo
+atributo 2: ancho de sépalo
+
+Caso 2:
+atributo 1: Longitud de pétalo
+atributo 2: ancho de pétalo
+
+Caso 3:
+atributo 1: Producto entre longitud y ancho de sépalo
+atributo 2: Producto entre longitud y ancho de pétalo
+
+# MODELOS
+Caso 1: SGDClassifier y LogisticRegression
+Caso 2: SGDClassifier y KNeighborsClassifier
+Caso 3: LogisticRegression y KNeighborsClassifier
+
+Parciales:
+{TAREA: Caso 1, ATRIBUTOS: Caso 1, MODELOS: Caso 1} MURILLO ZAPATA MIGUEL ANGEL
+{TAREA: Caso 1, ATRIBUTOS: Caso 1, MODELOS: Caso 2} 
+{TAREA: Caso 1, ATRIBUTOS: Caso 1, MODELOS: Caso 3} ALVAREZ CARRERO GERMAN JOSE
+{TAREA: Caso 1, ATRIBUTOS: Caso 2, MODELOS: Caso 1} 
+{TAREA: Caso 1, ATRIBUTOS: Caso 2, MODELOS: Caso 2} ARANGO JARAMILLO JUAN JOSE
+{TAREA: Caso 1, ATRIBUTOS: Caso 2, MODELOS: Caso 3} 
+{TAREA: Caso 1, ATRIBUTOS: Caso 3, MODELOS: Caso 1} BOLIVAR HIGUITA JUAN PABLO
+{TAREA: Caso 1, ATRIBUTOS: Caso 3, MODELOS: Caso 2} 
+{TAREA: Caso 1, ATRIBUTOS: Caso 3, MODELOS: Caso 3} CORRALES BOHÓRQUEZ ANGEL
+{TAREA: Caso 2, ATRIBUTOS: Caso 1, MODELOS: Caso 1} 
+{TAREA: Caso 2, ATRIBUTOS: Caso 1, MODELOS: Caso 2} GALLEGO JARAMILLO JUAN PABLO
+{TAREA: Caso 2, ATRIBUTOS: Caso 1, MODELOS: Caso 3} 
+{TAREA: Caso 2, ATRIBUTOS: Caso 2, MODELOS: Caso 1} GRANADA ZAPATA SUSANA
+{TAREA: Caso 2, ATRIBUTOS: Caso 2, MODELOS: Caso 2} 
+{TAREA: Caso 2, ATRIBUTOS: Caso 2, MODELOS: Caso 3} JIMÉNEZ GARCÍA MIGUEL ÁNGEL
+{TAREA: Caso 2, ATRIBUTOS: Caso 3, MODELOS: Caso 1} 
+{TAREA: Caso 2, ATRIBUTOS: Caso 3, MODELOS: Caso 2} MOSQUERA PEREA JESÚS JHOVANNY
+{TAREA: Caso 2, ATRIBUTOS: Caso 3, MODELOS: Caso 3} TORRES MERIÑO JOSE LUIS CAMILO
+
+
+Punto 1
+
+Tome el dataset `load_iris` y constituya el arreglo de imágenes X 
+y el de etiquetas y como arreglos de numpy de valores de tipo `float64`.   
+
+Divida el dataset en un subconjunto para entrenamiento y un subconjunto de
+ testeo, pero para esta tarea relice muestreo estratificado utilizando la función 
+`train_test_split()` del módulo `model_selection` de Sklearn. 
+
+
+Punto 2
+
+Después de haber seleccionado los atributos predictores asignados, escale los 
+datos con utilizando la clase `MaxMinScaler` o la clase `StandardScaler` del módulo 
+`preprocessing` de sklearn. 
+
+Instancie y entrene los modelos asignados.  
+
+
+Punto 3  
+
+Selecciones el mejor modelo utilizando la metodología de validación cruzada a 
+través de la función `cross_val_predict()` pero midiendo el desempeño en las 
+hojas de validación utilizando la función `f1_score`. 
+
+Luego afine el modelo seleccionado con la metodología de Grilla de hiperparámetros 
+(`GridSearchCV(scoring = 'f1_macro'`)). 
+
+* Para el `SGDClassifier` utilice los parámetros de 
+`alpha` con valores `[10**-1, 10**-2]`,
+ `learning_rate` con valores en la lista `['constant']`, 
+`eta0` con valores en la lista `[0.1, 0.01, 0.001]` y 
+`penalty` con valores en la lista `['l2']`.
+
+* Para el `KNeighborsClassifier` utilice los parámetros 
+`n_neighbors` con valores en la lista `[3,4,5,6,7]` y 
+`weights` con valores en la lista `['uniform', 'distance']`.
+
+*  Para `LogisticRegression` utilice los hiperparámetros:
+`penalty` con valores en la lista `['l2']` y 
+`C` con valores en la lista `[10**0, 10**-1, 10**-2]`. 
+
+
+* Capture el mejor modelo utilizando el atributo de inspección `best_estimator_`
+
+
+
+Punto 4 
+
+
+* Verifique que el desempeño en el conjunto de testeo es cercano al 
+determinado en el conunto de entrenamiento.   
+
+* cuantifique el desmpeño de su modelo final en el conjunto de testeo usando 
+la función `f1_score(y_test, y_test_predicciones)`
+
+
+
+
+
+
+
+
+
+
+
+
